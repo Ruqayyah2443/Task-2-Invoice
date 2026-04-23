@@ -1,0 +1,85 @@
+.filter {
+  position: relative;
+}
+
+/* The "Filter by status" trigger button */
+.filter__trigger {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.filter__trigger:hover {
+  color: var(--color-text-body);
+}
+
+/* On mobile show short label, hide long */
+.filter__label-long {
+  display: none;
+}
+.filter__label-short {
+  display: inline;
+}
+
+/* Chevron rotates when dropdown is open */
+.filter__chevron {
+  transition: transform 0.2s;
+}
+.filter__chevron--open {
+  transform: rotate(180deg);
+}
+
+/* The dropdown box */
+.filter__dropdown {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-bg-card);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 192px;
+  z-index: 100;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Each checkbox row */
+.filter__option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  user-select: none;
+}
+
+/* Custom checkbox */
+.filter__checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  accent-color: var(--color-purple);
+  cursor: pointer;
+}
+
+/* On tablet/desktop show long label */
+@media (min-width: 600px) {
+  .filter__label-long {
+    display: inline;
+  }
+  .filter__label-short {
+    display: none;
+  }
+}

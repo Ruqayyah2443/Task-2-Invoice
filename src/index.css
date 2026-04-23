@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-purple:       #7C5DFA;
+  --color-purple-light: #9277FF;
+
+  --color-bg-body:    #F8F8FB;
+  --color-bg-card:    #FFFFFF;
+  --color-bg-sidebar: #373B53;
+
+  --color-text-heading: #0C0E16;
+  --color-text-body:    #888EB0;
+  --color-text-muted:   #7E88C3;
+
+  --color-border: #DFE3FA;
+
+  --color-paid-bg:      #F3FDFA;
+  --color-paid-text:    #33D69F;
+  --color-pending-bg:   #FFF8F0;
+  --color-pending-text: #FF8F00;
+  --color-draft-bg:     #F4F4F5;
+  --color-draft-text:   #373B53;
+
+  --sidebar-gradient: linear-gradient(180deg, #373B53 0%, #252945 100%);
+}
+
+.dark {
+  --color-bg-body:    #141625;
+  --color-bg-card:    #1E2139;
+  --color-bg-sidebar: #252945;
+
+  --color-text-heading: #FFFFFF;
+  --color-text-body:    #DFE3FA;
+  --color-text-muted:   #888EB0;
+
+  --color-border: #252945;
+
+  --color-draft-bg:   #292C44;
+  --color-draft-text: #DFE3FA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  background-color: var(--color-bg-body);
+  color: var(--color-text-body);
+}

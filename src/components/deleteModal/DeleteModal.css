@@ -1,0 +1,43 @@
+/* src/components/DeleteModal.css */
+
+/* Dark overlay — covers the whole screen */
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* top:0, right:0, bottom:0, left:0 all at once */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 24px;
+}
+
+/* The white card */
+.modal-box {
+  background-color: var(--color-bg-card);
+  border-radius: 8px;
+  padding: 48px;
+  max-width: 480px;
+  width: 100%;
+  outline: none; /* remove focus ring on the box itself */
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin-bottom: 16px;
+}
+
+.modal-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--color-text-body);
+  margin-bottom: 24px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
